@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+}
+.bg {
+  height: 1000px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url(./igor-miske-JVSgcV8_vb4-unsplash.jpg);
+}
+#header {
+  height: 10%;
+  width: 100%;
+  position: fixed;
+  background-color: whitesmoke;
+}
+button {
+  background: rgb(241, 219, 19);
+  border: 0;
+  padding: 10px 20px;
+}
+.wrapper {
+  display: grid;
+  grid-gap: 20px;
+}
+.menu ul {
+  display: grid;
+  grid-gap: 10px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.menu a {
+  background: yellow;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+[aria-controls="menu-list"] {
+  display: none;
+}
+#main {
+  margin-top: 10px;
+}
+
+@media (max-width: 1000px) {
+  .menu {
+    perspective: 800px;
+  }
+  [aria-controls="menu-list"] {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .menu ul {
+    max-height: 0;
+    overflow: hidden;
+    transform: rotateX(90deg);
+    transition: all 0.5s;
+  }
+
+  [aria-expanded="true"] ~ ul {
+    display: grid;
+    max-height: 500px;
+    transform: rotateX(0);
+  }
+
+  [aria-expanded="false"] .close {
+    display: none;
+  }
+
+  [aria-expanded="true"] .close {
+    display: inline-block;
+  }
+
+  [aria-expanded="true"] .open {
+    display: none;
+  }
+  .menu a {
+    background: yellow;
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+  #header {
+    height: 16%;
+    width: 100%;
+    position: fixed;
+    background-color: whitesmoke;
+  }
+}
+@media (max-width: 700px) {
+  .menu a {
+    background: yellow;
+    display: block;
+    text-decoration: none;
+    padding: 6px;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-size: 10px;
+  }
+}

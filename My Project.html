@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            background-color: darkgrey;
+        }
+        #div{
+            height: 500px;
+            width: 100%;
+            
+            background-image: url(./sergey-zolkin-_UeY8aTI6d0-unsplash.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            
+        }
+        .Assingment-List{
+            display: grid;
+            gap: 10px;
+            height: 400px;
+            font-weight: 900;
+            padding: 10px;
+            text-align: center;
+            grid-template-columns: repeat(3,auto);
+            grid-template-rows:repeat(3, auto);
+            
+            grid-template-areas: 'a b c'
+                                 ;  
+                                   
+        }
+        h2{
+           font-style: italic;
+           color: rgb(173, 3, 88);
+        }
+        .Assingment-List div{
+             background-color: lightgoldenrodyellow;
+             opacity: 0.7;
+        }
+        .a{
+            grid-area: a;
+            
+        }
+        .b{
+            grid-area: b;   
+        }
+        .c{
+            grid-area: c;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>My Assingments</h1>
+    <div id="div">
+        
+        <div class="Assingment-List">
+           <div class="a">
+              <h2> Assignment No.1</h2>
+                <a href="./Backtracking.html">Backtracking Assingment</a>
+           </div>
+            <div class="b">
+              <h2>Assignment No. 2</h2>
+                <a href="./Assignment1.html">My First Website</a>
+            </div>
+            <div class="c">
+                <h2>Assingment No. 3</h2>
+                    <a href="./Resturant.html">Resturant </a>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>
